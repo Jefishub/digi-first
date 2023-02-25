@@ -1,1 +1,159 @@
-as
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="disney.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2family=Quicksand:wgth@300&display=swap" rel="stylesheet">
+    <title>Disney World, Orlando</title>
+    <script>
+        function changePage(id) {
+            var p1 = document.getElementById("sivu1")
+            var p2 = document.getElementById("sivu2")
+
+            if (id == "etusivu") {
+                p1.style.visibility = "visible";
+                p2.style.visibility = "hidden";
+                p1.style.height = "auto";
+                p2.style.height = "0";
+            }
+
+            else if (id = "kuva") {
+                p1.style.visibility = "hidden";
+                p2.style.visibility = "visible";
+                p1.style.height = "0";
+                p2.style.height = "auto";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="kontti">
+        <div class="navi">
+            <ul id="nav">
+                <li><a href="#" onclick="changePage('etusivu')">Disney World</a></li>
+                <li><a href="#" onclick="changePage('kuva')">Kuva Disney Worldista</a></li>
+            </ul>
+        </div>
+        <div id="sivut">
+            <div id="sivu1">
+                <h1>Disney World</h1>
+                <p>Walt Disney World on suuri lasten ja aikuisten lomakeskus Floridassa. Se on yksi Disneyn kuudesta
+                    huvipuistosta.
+                    Samaan konseptiin perustuvat myös vastaavat teemapuistot Los Angelesissa, Pariisissa, Tokiossa ja
+                    Hongkongissa.
+                </p>
+                <p>Walt Disney World Floridassa on maailman suurin teemamaailma, jonka pinta-ala on noin 120
+                    neliökilometriä ja joka
+                    sijaitsee noin 32 kilometriä Orlandosta lounaaseen. Walt Disney World avattiin 1. lokakuuta 1971.
+                    </h2>
+                <p>Walt Disney World koostuu useammasta teema-alueesta. WDW:llä on myös oma keskustansa Disney Downtown,
+                    jossa
+                    sijaitsee muun muassa myymälöitä, ravintoloita, yökerhoja, AMC-elokuvateatteri, viisikerroksinen
+                    pelihalli
+                    (Disney Quest) sekä Cirque du Soleil -sirkusryhmän La Nouba -teatteri. WDW:lta löytyy myös toinen
+                    "iltakeskus"
+                    Boardwalk, jossa sijaitsee ravintoloita ja pubeja</p>
+                <h2>Teema-alueet</h2>
+                <p>Magic Kingdom -alue rakennettiin vuoden 1971 avajaisiin ensimmäisenä. Se koostuu edelleen pienemmistä
+                    teema-alueista, jotka sijaitsevat keskuslinnan ympärillä. Ympärillä olevat teema-alueet on nimetty
+                    seuraavasti:
+                    Fantasyland, Tomorrowland, Adventureland ja Frontierland. Alueen koko on 0,433 km².</p>
+                <p>Epcot on alue, joka sisältää paljon erilaista toimintaa. Alueet on nimetty seuraavasti: Universe of
+                    Energy,
+                    Wonders of Life, Horizons ja World of Motions. Lisäksi tällä alueella sijaitsee yhdestätoista maasta
+                    rakennettu
+                    teemoitettu maailma, tämä eri maiden paviljonki onkin vanhin ja pisimpään auki ollut maailmoiden
+                    näyttely
+                    maailmassa. Puisto avattiin 1. lokakuuta 1982. Epcot on niin sanottu Tulevaisuuden keksintöjen alue.
+                </p>
+                <p>Disney Hollywood Studios -maailma sisältää toimintaan, elokuvaan, animaatioon ja televisioon
+                    liittyviä teemoja.
+                    Puisto avattiin 1. toukokuuta 1989. Alueen koko on 0,546 km².</p>
+                <p>Animal Kingdom käsittelee eläviä eläimiä sekä sukupuuttoon kuolleita hirmuliskoja. Puisto avattiin
+                    22. huhtikuuta
+                    1998. Alueen koko on kaksi neliökilometriä, ja se jakaantuu seitsemään erilaiseen kohteeseen. Iso
+                    osa puistosta
+                    on safarin peitossa, jossa elää vakituisesti satoja eläimiä ympäri maailman. Vierailijoilla
+                    mahdollisuus päästä
+                    tutustumaan ja näkemään esim. Afrikan eläimiä. Lokakuussa 2011 Disney ilmoitti alkavansa 2013
+                    rakentaa Animal
+                    Kingdomin lisäaluetta. Uusi alue on Avatar-elokuvasta tuttu Pandora. James Cameron on yksi puiston
+                    alueen
+                    pääsuunnittelijoista</p>
+                <p>Lähde: Wikipedia</p>
+            </div>
+            <div id="sivu2">
+                <h1>Kuva Disney Worldista</h1>
+                <p>Magic Kingdom -alue rakennettiin vuoden 1971 avajaisiin ensimmäisenä. Se koostuu edelleen pienemmistä
+                    teema-alueista, jotka sijaitsevat keskuslinnan ympärillä. Ympärillä olevat teema-alueet on nimetty
+                    seuraavasti:
+                    Fantasyland, Tomorrowland, Adventureland ja Frontierland. Alueen koko on 0,433 km².</p>
+                <h2>Kuvan rajaus</h2>
+                <canvas id="kuva" width="200" height="200"></canvas>
+                <h2>Peilikuva ja rajaus</h2>
+                <canvas id="kuva2" width="200" height="200"></canvas>
+                <h2>Kuvan skaalaus</h2>
+                <canvas id="kuva3" width="200" height="200"></canvas>
+                <h2>Alkuperäinen kuva</h2>
+                <img src="disney.jpg" />
+            </div>
+        </div>
+    </div>
+    <script>
+        var canvas = document.getElementById('kuva');
+        var context = canvas.getContext('2d');
+        var imageObj = new Image();
+        imageObj.onload = function () {
+            var sourceX = 900;
+            var sourceY = 900;
+            var sourceWidth = 1280;
+            var sourceHeight = 782;
+            var destWidth = sourceWidth;
+            var destHeight = sourceHeight;
+            var destX = (canvas.width / 2 - destWidth / 2);
+            var destY = (canvas.height / 2 - destHeight / 2);
+
+            context.drawImage(imageObj, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight)
+        }
+        imageObj.src = 'disney.jpg'
+    </script>
+    <script>
+        var canvas2 = document.getElementById('kuva2');
+        var context2 = canvas2.getContext('2d');
+        var imageObj2 = new Image();
+        imageObj2.onload = function () {
+            context2.scale(-1, 1);
+            var sourceX = 900;
+            var sourceY = 900;
+            var sourceWidth = 1280;
+            var sourceHeight = 782;
+            var destWidth = sourceWidth;
+            var destHeight = sourceHeight;
+            var destX = (canvas.width / 2 - destWidth / 2);
+            var destY = (canvas.height / 2 - destHeight / 2);
+
+            context2.drawImage(imageObj2, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight)
+        }
+        imageObj2.src = 'disney.jpg'
+    </script>
+    <script>
+        var canvas3 = document.getElementById('kuva3');
+        var context3 = canvas3.getContext('2d');
+        var imageObj3 = new Image();
+        imageObj3.onload = function () {
+            context3.scale(0.2, 0.2);
+            var sourceX = 900;
+            var sourceY = 900;
+            var sourceWidth = 1280;
+            var sourceHeight = 782;
+            var destWidth = sourceWidth;
+            var destHeight = sourceHeight;
+            var destX = (canvas.width / 2 - destWidth / 2);
+            var destY = (canvas.height / 2 - destHeight / 2);
+
+            context3.drawImage(imageObj3, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight)
+        }
+        imageObj3.src = 'disney.jpg'
+    </script>
+</body>
