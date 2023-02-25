@@ -31,16 +31,31 @@ p {
     height: 0;
 }
 
-img {
-    vertical-align: text-top;
-    max-width: 400px;
-    max-height: 400px;
+#sivu3 {
+    visibility: hidden;
+    height: 0;
 }
 
-#nav ul {
+#sivu4 {
+    visibility: hidden;
+    height: 0;
+}
+
+#sivu5 {
+    visibility: hidden;
+    height: 0;
+}
+img {
+    vertical-align: text-top;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#nav {
     list-style-type: none;
     width: 100%;
     line-height: 20px;
+    padding-left: 6px;
 }
 
 #nav li {
@@ -59,4 +74,20 @@ img {
 
 #nav a:hover {
     background-color: #1fa71f;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-container-left {
+    text-align: justify;
+    margin-right: 20px;
+    width: 50%;
+}
+
+.page-container-right {
+    margin-top: 80px;
+    width: 50%;
 }
