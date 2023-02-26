@@ -1,6 +1,9 @@
 body {
     font-family: "Lato", sans-serif;
     margin: 0px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container {
@@ -59,6 +62,7 @@ body {
 
 .portfolio-item-wrapper {
     position: relative;
+    border: rgb(0, 0, 0) solid 3px;
 }
 
 .portfolio-img-background {
@@ -96,6 +100,12 @@ body {
     color: lightseagreen;
     font-weight: 600;
 }
+.logo-wrapper {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    color: rgb(255, 255, 255)
+}
 
 .logo-wrapper img {
     width: 50%;
@@ -106,7 +116,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
+.profile-image-wrapper {
+    padding-top: 30px;
+    margin-top: 30px;
+}
 .profile-image-wrapper img {
     width: 100%;
 }
