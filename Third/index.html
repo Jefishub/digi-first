@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container-md">
+        <div class="container-fluid p-5 bg-primary text-white text-center">
+            <h1>Paritanssia Suomessa</h1>
+            <p>Tutustu paritanssimaailman eri kulttuureihin ja tapahtumiin</p>
+        </div>
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner" style="max-height: 600px;">
+                <div class="carousel-item active">
+                    <img src="images/bachata.jpg" alt="Bachata" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/bugg.jpg" alt="Bugg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/foxtrot.jpg" alt="Foxtrot" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/salsa.jpg" alt="Salsa" class="d-block w-100">
+                </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <!-- Containers -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Lavatanssit</h3>
+                    <p>Lavatanssi on tanssityyli, jota tanssitaan usein julkisissa tanssitilaisuuksissa, kuten
+                        tanssipaikoilla tai ulkotansseissa. Se on perinteinen tanssityyli, joka on suosittu erityisesti
+                        Suomessa, Ruotsissa ja Norjassa.</p>
+                    <p>Lavatansseissa tanssitaan usein parin kanssa, ja tansseja on erilaisia, kuten foksi, humppa,
+                        tango, valssi ja jenkka. Lavatansseissa keskitytään usein tanssimisen hauskuuteen ja
+                        yhteisöllisyyteen, ja niissä on yleensä rento ja iloinen tunnelma.</p>
+                    <p>Lavatanssien suosio on kestänyt jo pitkään, ja niitä järjestetään ympäri vuoden erilaisissa
+                        tapahtumissa ja juhlissa. Lavatanssit ovat myös osa Suomen, Ruotsin ja Norjan kansanperinnettä.
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Lattaribileet</h3>
+                    <p>Lattaribileet ovat tanssijuhla, jossa tanssitaan latinalaisamerikkalaisia tansseja, kuten salsaa,
+                        bachataa, reggaetonia, cha chaa, merenguea ja muita samankaltaisia tansseja. Lattaribileiden
+                        tunnelma on yleensä hyvin energinen, rytmikäs ja iloinen, ja niissä on yleensä vahva
+                        yhteisöllinen tunnelma.</p>
+                    <p>Lattaribileillä on usein monipuolinen musiikkivalikoima, joka sisältää erilaisia
+                        latinalaisamerikkalaisia musiikkityylejä. Tanssilattialla nähdään eri-ikäisiä tanssijoita, jotka
+                        voivat olla aloittelijoita tai kokeneita tanssijoita.</p>
+                    <p>Lattaribileissä pukeudutaan usein värikkäisiin vaatteisiin ja asusteisiin, jotka korostavat
+                        latinalaisamerikkalaista tanssi- ja musiikkikulttuuria. Tanssijat voivat halutessaan käyttää
+                        myös erilaisia tanssikenkiä, kuten latinokenkiä tai tanssisneakereita, jotka mahdollistavat
+                        paremman liikkuvuuden ja tanssinautinnon.</p>
+                    <p>Kaiken kaikkiaan lattaribileet ovat hauska ja energinen tapa tutustua latinalaisamerikkalaisiin
+                        tansseihin, nauttia hyvästä musiikista ja viettää aikaa yhdessä muiden tanssijoiden kanssa.</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Westibileet</h3>
+                    <p>West Coast Swing bileet ovat tanssijuhla, jossa keskitytään pääasiassa west coast swing
+                        -tanssiin. West Coast Swing bileissä on yleensä rento ja hauska tunnelma, joka houkuttelee
+                        paikalle niin aloittelijoita kuin kokeneitakin tanssijoita.</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                    <p>Bileiden musiikkivalikoima on monipuolinen ja sisältää erilaisia musiikkityylejä, kuten bluesia,
+                        jazzia, poppia ja rockia. West Coast Swing bileissä on usein erityisesti valittu musiikkia, joka
+                        sopii hyvin tähän tanssilajiin.</p>
+                    <p>Tanssilattialla nähdään eri-ikäisiä ja eritasoisia tanssijoita, jotka nauttivat tanssimisesta ja
+                        tanssien oppimisesta yhdessä muiden kanssa. West Coast Swing bileissä järjestetään usein myös
+                        tanssikursseja, joissa opetetaan uusia kuvioita ja tekniikoita, jotka auttavat kehittämään
+                        tanssitaitoja.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Jumbotron -->
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1>Kiinnostaisiko kokeilla paritanssia? </h1>
+                    <p>Alottelijoiden paritanssikursseja on lukuisia Helsingissä. Valitse vain itsellesi sopiva laji ja
+                        lähde
+                        mukaan. Et tarvitse paria, sillä tunneillä kierrätetään viejiä ja seuraajia, joten pääset
+                        vauhdilla
+                        mukaan tanssin maailman ja tutustut samalla lukuisiin uusiin ihmisiinn</p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="images/waltz.jpg" alt="valssi" class="w-100 p-3">
+                </div>
+            </div>
+        </div>
+        <p>Kuvat: Picsart.com, text-to-image AI</p>
+        <p>Teksti: chatGPT</p>
+    </div>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
